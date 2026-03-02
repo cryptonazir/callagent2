@@ -45,6 +45,7 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Каналы", href: "#channels" },
   { label: "Тарифы", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
+  { label: "Контакты", href: "#contacts" },
 ] as const;
 
 export const NAV_CTA = "Получить демо" as const;
@@ -153,7 +154,7 @@ export const PRICING = {
       period: "/мес",
       description: "Для малого бизнеса и тестирования ИИ-продаж",
       features: [
-        "1 канал на выбор",
+        "2 канала: WhatsApp + Instagram Direct",
         "До 500 диалогов/мес",
         "Базовая аналитика",
         "Настройка скриптов",
@@ -238,6 +239,39 @@ export const FAQ = {
   ] as FaqItem[],
 } as const;
 
+// Contacts
+export const CONTACTS = {
+  sectionTitle: "Свяжитесь с нами",
+  sectionSubtitle:
+    "Оставьте заявку, и мы свяжемся с вами в течение 30 минут",
+  formFields: {
+    name: "Ваше имя",
+    phone: "Телефон",
+    email: "Email",
+    company: "Название компании",
+    message: "Сообщение",
+    submit: "Отправить заявку",
+  },
+  info: [
+    {
+      icon: "email" as const,
+      label: "Email",
+      value: "hello@salesai.kz",
+    },
+    {
+      icon: "phone" as const,
+      label: "Телефон",
+      value: "+7 (777) 123-45-67",
+    },
+    {
+      icon: "location" as const,
+      label: "Офис",
+      value: "Алматы, Казахстан",
+    },
+  ],
+  successMessage: "Спасибо! Мы свяжемся с вами в ближайшее время.",
+} as const;
+
 // CTA Section
 export const CTA = {
   title: "Готовы увеличить продажи?",
@@ -268,7 +302,7 @@ export const FOOTER = {
         { label: "О нас", href: "#" },
         { label: "Блог", href: "#" },
         { label: "Карьера", href: "#" },
-        { label: "Контакты", href: "#" },
+        { label: "Контакты", href: "#contacts" },
       ],
     },
     {
