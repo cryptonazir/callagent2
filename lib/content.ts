@@ -46,6 +46,7 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Тарифы", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
   { label: "Контакты", href: "#contacts" },
+  { label: "Политика", href: "/privacy" },
 ] as const;
 
 export const NAV_CTA = "Получить демо" as const;
@@ -149,13 +150,14 @@ export const PRICING = {
   plans: [
     {
       name: "Starter",
-      price: "200 000",
+      price: "150 000",
       currency: "₸",
-      period: "/мес",
+      period: "",
       description: "Для малого бизнеса и тестирования ИИ-продаж",
       features: [
         "2 канала: WhatsApp + Instagram Direct",
         "До 500 диалогов/мес",
+        "Разработка продающей Landing Page",
         "Базовая аналитика",
         "Настройка скриптов",
         "Поддержка по email",
@@ -164,13 +166,14 @@ export const PRICING = {
     },
     {
       name: "Business",
-      price: "350 000",
+      price: "250 000",
       currency: "₸",
-      period: "/мес",
+      period: "",
       description: "Для растущего бизнеса с активными продажами",
       features: [
         "Все 3 канала",
         "До 2 000 диалогов/мес",
+        "Разработка продающей Landing Page",
         "Продвинутая аналитика",
         "A/B тесты скриптов",
         "Персональный менеджер",
@@ -181,13 +184,14 @@ export const PRICING = {
     },
     {
       name: "Enterprise",
-      price: "500 000",
+      price: "400 000",
       currency: "₸",
-      period: "/мес",
+      period: "",
       description: "Для крупного бизнеса с большими объёмами",
       features: [
         "Все 3 канала",
         "Безлимитные диалоги",
+        "Разработка продающей Landing Page",
         "Кастомная аналитика",
         "Выделенная команда",
         "SLA 99.9%",
@@ -247,26 +251,28 @@ export const CONTACTS = {
   formFields: {
     name: "Ваше имя",
     phone: "Телефон",
-    email: "Email",
-    company: "Название компании",
-    message: "Сообщение",
+    packageLabel: "Выберите пакет",
+    packages: ["Starter — 150 000 ₸", "Business — 250 000 ₸", "Enterprise — 400 000 ₸"],
     submit: "Отправить заявку",
+  },
+  whatsapp: {
+    label: "Написать в WhatsApp",
+    phone: "77071024800",
+  },
+  telegram: {
+    label: "Написать в Telegram",
+    username: "nazir_gm",
   },
   info: [
     {
-      icon: "email" as const,
-      label: "Email",
-      value: "hello@salesai.kz",
+      icon: "person" as const,
+      label: "Имя",
+      value: "Назир",
     },
     {
       icon: "phone" as const,
       label: "Телефон",
-      value: "+7 (777) 123-45-67",
-    },
-    {
-      icon: "location" as const,
-      label: "Офис",
-      value: "Алматы, Казахстан",
+      value: "+7 (707) 102-48-00",
     },
   ],
   successMessage: "Спасибо! Мы свяжемся с вами в ближайшее время.",
@@ -311,7 +317,7 @@ export const FOOTER = {
         { label: "Документация", href: "#" },
         { label: "Помощь", href: "#" },
         { label: "Статус", href: "#" },
-        { label: "Политика", href: "#" },
+        { label: "Политика", href: "/privacy" },
       ],
     },
   ],

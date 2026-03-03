@@ -248,7 +248,11 @@ export default function Pricing() {
 
               {/* CTA */}
               <a
-                href="#"
+                href="#contacts"
+                onClick={(e: React.MouseEvent) => {
+                  e.preventDefault();
+                  document.querySelector("#contacts")?.scrollIntoView({ behavior: "smooth" });
+                }}
                 style={{
                   display: "block",
                   textAlign: "center",

@@ -115,3 +115,13 @@ body {
   background: rgba(99, 91, 255, 0.15);
   color: var(--navy);
 }
+
+/* Privacy page lists */
+article ul {
+  margin: 0;
+  padding-left: 24px;
+}
+
+article li {
+  margin-bottom: 6px;
+}
