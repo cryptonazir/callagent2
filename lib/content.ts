@@ -58,16 +58,16 @@ export const HERO = {
   title: "ИИ-ассистент, который",
   titleHighlight: "продаёт за вас 24/7",
   description:
-    "Внедряем ИИ-продажников в WhatsApp, Instagram и голосовые дозвоны. Конверсия выше на 340%. Запуск за 5 дней.",
+    "Внедряем ИИ-продажников в WhatsApp, Instagram и голосовые дозвоны. Конверсия выше на 180%. Запуск за 3 дня.",
   ctaPrimary: "Запустить ИИ-продажника",
   ctaSecondary: "Смотреть демо",
 } as const;
 
 // Metrics
 export const METRICS: Metric[] = [
-  { value: "+340%", label: "Рост конверсии" },
+  { value: "+180%", label: "Рост конверсии" },
   { value: "24/7", label: "Работает без выходных" },
-  { value: "5 дней", label: "Запуск под ключ" },
+  { value: "3 дня", label: "Запуск под ключ" },
   { value: "3 канала", label: "WhatsApp, Instagram, Звонки" },
 ] as const;
 
@@ -156,7 +156,7 @@ export const PRICING = {
       description: "Для малого бизнеса и тестирования ИИ-продаж",
       features: [
         "2 канала: WhatsApp + Instagram Direct",
-        "До 500 диалогов/мес",
+        "До 1 000 диалогов/мес",
         "Разработка продающей Landing Page",
         "Базовая аналитика",
         "Настройка скриптов",
