@@ -45,6 +45,8 @@ function ContactIcon({ icon }: { icon: string }) {
 
 export default function Contacts() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -57,9 +59,23 @@ export default function Contacts() {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSending(true);
+    setError("");
+    try {
+      const res = await fetch("/api/send-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (!res.ok) throw new Error();
+      setSubmitted(true);
+    } catch {
+      setError("Ошибка отправки. Попробуйте ещё раз или напишите в WhatsApp.");
+    } finally {
+      setSending(false);
+    }
   };
 
   const inputStyle: React.CSSProperties = {
@@ -298,9 +314,16 @@ export default function Contacts() {
                     e.currentTarget.style.background = "var(--primary)";
                     e.currentTarget.style.transform = "translateY(0)";
                   }}
+                  disabled={sending}
                 >
-                  {CONTACTS.formFields.submit}
+                  {sending ? "Отправка..." : CONTACTS.formFields.submit}
                 </button>
+
+                {error && (
+                  <p style={{ color: "#e53e3e", fontSize: 14, textAlign: "center", margin: 0 }}>
+                    {error}
+                  </p>
+                )}
               </form>
             )}
           </motion.div>
