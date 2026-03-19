@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Metrics from "@/components/Metrics";
 import HowItWorks from "@/components/HowItWorks";
 import Channels from "@/components/Channels";
+import Cases from "@/components/Cases";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import Contacts from "@/components/Contacts";
@@ -18,6 +19,7 @@ export default function Home() {
         <Metrics />
         <HowItWorks />
         <Channels />
+        <Cases />
         <Pricing />
         <FAQ />
         <Contacts />

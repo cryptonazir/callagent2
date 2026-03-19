@@ -34,6 +34,15 @@ export interface Plan {
   badge?: string;
 }
 
+export interface CaseStudy {
+  company: string;
+  industry: string;
+  channel: string;
+  problem: string;
+  result: string;
+  metric: string;
+}
+
 export interface FaqItem {
   question: string;
   answer: string;
@@ -43,6 +52,7 @@ export interface FaqItem {
 export const NAV_LINKS: NavLink[] = [
   { label: "Как работает", href: "#how-it-works" },
   { label: "Каналы", href: "#channels" },
+  { label: "Кейсы", href: "#cases" },
   { label: "Тарифы", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
   { label: "Контакты", href: "#contacts" },
@@ -141,6 +151,44 @@ export const CHANNELS = {
       ],
     },
   ] as Channel[],
+} as const;
+
+// Cases
+export const CASES = {
+  sectionTitle: "Кейсы клиентов",
+  sectionSubtitle: "Реальные результаты наших ИИ-ассистентов в разных нишах",
+  items: [
+    {
+      company: "EsteLine",
+      industry: "Пластическая хирургия",
+      channel: "WhatsApp",
+      problem:
+        "Пациенты стеснялись звонить, писали в мессенджер но ждали ответа часами — уходили к конкурентам",
+      result:
+        "Бот деликатно выясняет запрос и записывает к нужному хирургу за 30 секунд",
+      metric: "+140%",
+    },
+    {
+      company: "SmileDent",
+      industry: "Сеть стоматологий",
+      channel: "Instagram Direct",
+      problem:
+        "60% заявок приходили вечером и в выходные, когда администраторы не работали",
+      result:
+        "Бот отвечает 24/7, напоминает о визите и предлагает свободные слоты",
+      metric: "+190%",
+    },
+    {
+      company: "TechnoPlus",
+      industry: "Интернет-магазин бытовой техники",
+      channel: "WhatsApp + голосовой дозвон",
+      problem:
+        "Менеджеры не успевали консультировать по 200+ товарам, клиенты уходили без покупки",
+      result:
+        "Бот подбирает технику по бюджету и параметрам, оформляет доставку",
+      metric: "+140%",
+    },
+  ] as CaseStudy[],
 } as const;
 
 // Pricing
